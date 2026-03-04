@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, .dark {
+    --background: 216 28% 7%;      /* #0d1117 */
+    --foreground: 0 0% 100%;       /* #ffffff */
+    
+    --card: 215 21% 11%;           /* #161b22 */
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 215 21% 11%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 187 71% 47%;        /* #26c6da (cyan) */
+    --primary-foreground: 0 0% 0%; /* Black text on cyan */
+    
+    --secondary: 215 18% 13%;      /* #1c2128 */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 215 18% 13%;
+    --muted-foreground: 211 13% 58%; /* #8b949e */
+    
+    --accent: 215 18% 13%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 12% 21%;         /* #30363d */
+    --input: 215 18% 13%;          /* #1c2128 */
+    --ring: 187 71% 47%;
+    
+    --radius: 1rem;
+    
+    --font-sans: 'Tajawal', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .rtl-text {
+    direction: rtl;
+  }
+}
